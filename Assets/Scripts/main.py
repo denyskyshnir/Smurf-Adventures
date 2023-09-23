@@ -51,7 +51,7 @@ def draw_map():
 
 # Створення списку землі
 ground_list = [pygame.Rect(x * tile_size, y * tile_size, tile_size, tile_size) for y in range(map_height)
-               for x in range(map_width) if tile_map[y][x] in [5, 6, 8, 9]]
+               for x in range(map_width) if tile_map[y][x] in [5, 6, 7, 8, 9, 10, 11]]
 
 
 # Функція для відмалювання контурів карти
@@ -148,7 +148,6 @@ while start:
     else:
         flipped_player = pygame.transform.flip(player_image, True, False)
         screen.blit(flipped_player, player.rect)
-
 
     if respawn:
         # Перевірка, чи минуло 3 секунди
